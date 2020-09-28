@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Kim's Assets/Main Menu.unity
+    guid: 0a72b265ec86eae4eb3aa527a3a2f8dc
+  - enabled: 1
+    path: Assets/Kim's Assets/Test Scene.unity
+    guid: 1630dcc7f2393694dad3bcf237100754
   m_configObjects: {}
