@@ -8,7 +8,8 @@ public class PlayerController : MonoBehaviour
 {
     public float velocity = 5;
     public float turnSpeed = 10;
-    public float hieght = 0.5f;
+    public float jogSpeed = 5;
+    public float height = 0.5f;
     public float heightPadding = 0.05f;
     public LayerMask ground;
     public float maxGroundAngle = 120;
@@ -23,11 +24,15 @@ public class PlayerController : MonoBehaviour
 
     Vector3 forward;
     RaycastHit hitInfo;
+
     bool grounded;
+
+    public Animator anim;
 
     void Start()
     {
         cam = Camera.main.transform;
+        anim = GetComponent<Animator>();
     }
 
     void Update()
@@ -47,7 +52,6 @@ public class PlayerController : MonoBehaviour
 
         Rotate();
         Move();
-
     }
 
     void GetInput() //Input is based on Horizontal (a,d,<,>) and Vertcial (w,s,^,v) keys
@@ -102,11 +106,11 @@ public class PlayerController : MonoBehaviour
 
     void CheckGround()
     {
-        if (Physics.Raycast(transform.position, -Vector3.up, out hitInfo, hieght + heightPadding, ground))
+        if (Physics.Raycast(transform.position, -Vector3.up, out hitInfo, height + heightPadding, ground))
         {
-            if (Vector3.Distance(transform.position, hitInfo.point) < hieght)
+            if (Vector3.Distance(transform.position, hitInfo.point) < height)
             {
-                transform.position = Vector3.Lerp(transform.position, transform.position + Vector3.up * hieght, 5 * Time.deltaTime);
+                transform.position = Vector3.Lerp(transform.position, transform.position + Vector3.up * height, 5 * Time.deltaTime);
             }
             grounded = true;
         }
@@ -126,13 +130,13 @@ public class PlayerController : MonoBehaviour
 
     void DrawDebugLines()
     {
-        if(!debug)
+        if (!debug)
         {
             return;
         }
 
-        Debug.DrawLine(transform.position, transform.position + forward * hieght * 2, Color.blue);
-        Debug.DrawLine(transform.position, transform.position - Vector3.up * hieght, Color.green);
+        Debug.DrawLine(transform.position, transform.position + forward * height * 2, Color.blue);
+        Debug.DrawLine(transform.position, transform.position - Vector3.up * height, Color.green);
     }
 
 }
