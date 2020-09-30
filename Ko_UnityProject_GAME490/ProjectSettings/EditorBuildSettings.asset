@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Kim's Assets/KoTestScene.unity
     guid: f03da10b9fe468347b16da4a46714ae8
+  - enabled: 1
+    path: Assets/TonysAssets/Scenes/TonyTestScene.unity
+    guid: f5078896e0e12df4f969fbcf8758eec5
   m_configObjects: {}
