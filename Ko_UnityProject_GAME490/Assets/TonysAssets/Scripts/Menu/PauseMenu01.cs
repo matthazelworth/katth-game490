@@ -1,12 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 public class PauseMenu01 : MonoBehaviour
 {
-    public static bool isPaused = false;
-    public GameObject pauseMenuUI;
+    public GameObject optionsScreen;
+    public GameObject pauseMenu;
     public GameObject player;
+
+    public string mainMenuScene;
+
+    private bool isPaused;
+
+    public GameObject loadingScreen, loadingIcon;
+    public Text loadingText;
 
     // Start is called before the first frame update
     void Start()
@@ -30,19 +38,64 @@ public class PauseMenu01 : MonoBehaviour
         }
     }
 
-    void Resume()
+    public void Resume()
     {
-        pauseMenuUI.SetActive(false);
-        Time.timeScale = 1f;
+        pauseMenu.SetActive(false);
         isPaused = false;
-        player.GetComponent<PlayerMovement>().enabled = true;
+        player.GetComponent<TileMovement>().enabled = true;
+        Time.timeScale = 1f;
     }
 
-    void Pause()
+    public void Pause()
     {
-        pauseMenuUI.SetActive(true);
-        Time.timeScale = 0f;
+        pauseMenu.SetActive(true);
         isPaused = true;
-        player.GetComponent<PlayerMovement>().enabled = false;
+        player.GetComponent<TileMovement>().enabled = false;
+        Time.timeScale = 0f;
+    }
+
+    public void OpenOptions()
+    {
+        optionsScreen.SetActive(true);
+    }
+
+    public void CloseOptions()
+    {
+        optionsScreen.SetActive(false);
+    }
+
+    public void QuitToMain()
+    {
+        //SceneManager.LoadScene(mainMenuScene);
+        //Time.timeScale = 1f;
+
+        StartCoroutine(LoadMainAsync());
+        Time.timeScale = 1f;
+    }
+
+    private IEnumerator LoadMainAsync()
+    {
+        loadingScreen.SetActive(true);
+
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(mainMenuScene);
+
+        while (!asyncLoad.isDone)
+        {
+            if (asyncLoad.progress >= 0.9f && !asyncLoad.allowSceneActivation)
+            {
+                loadingText.text = "Press Any Key To Continue";
+                loadingIcon.SetActive(false);
+
+                if (Input.anyKeyDown)
+                {
+                    loadingText.gameObject.SetActive(false);
+                    loadingIcon.gameObject.SetActive(false);
+
+                    asyncLoad.allowSceneActivation = true;
+                }
+            }
+
+            yield return null;
+        }
     }
 }
