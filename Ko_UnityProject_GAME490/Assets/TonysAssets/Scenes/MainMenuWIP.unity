@@ -1147,38 +1147,6 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1987467709, guid: e74609cc7e73e6b4483e01a2aaa06a18, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -470.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1987467709, guid: e74609cc7e73e6b4483e01a2aaa06a18, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -140.98
-      objectReference: {fileID: 0}
-    - target: {fileID: 1987467709, guid: e74609cc7e73e6b4483e01a2aaa06a18, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 1550.2874
-      objectReference: {fileID: 0}
-    - target: {fileID: 3818710797009254900, guid: e74609cc7e73e6b4483e01a2aaa06a18, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 0e4aae20c9af66740bffbe0eb3e107aa, type: 3}
-    - target: {fileID: 3818710797009254900, guid: e74609cc7e73e6b4483e01a2aaa06a18, type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3818710797009254900, guid: e74609cc7e73e6b4483e01a2aaa06a18, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3818710797009254900, guid: e74609cc7e73e6b4483e01a2aaa06a18, type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3818710797009254900, guid: e74609cc7e73e6b4483e01a2aaa06a18, type: 3}
-      propertyPath: m_Color.a
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3818710797009254901, guid: e74609cc7e73e6b4483e01a2aaa06a18, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1876,7 +1844,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &6795656313467696223
 RectTransform:
   m_ObjectHideFlags: 0
