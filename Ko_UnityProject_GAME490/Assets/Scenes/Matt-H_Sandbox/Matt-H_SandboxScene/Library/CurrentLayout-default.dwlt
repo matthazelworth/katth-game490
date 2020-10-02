@@ -21,7 +21,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 950, y: 544}
+  m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -45,7 +45,7 @@ MonoBehaviour:
     y: 0
     width: 1280
     height: 951
-  m_MinSize: {x: 950, y: 544}
+  m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &3
 MonoBehaviour:
@@ -115,7 +115,7 @@ MonoBehaviour:
   m_MinSize: {x: 713, y: 494}
   m_MaxSize: {x: 18008, y: 14044}
   vertical: 0
-  controlID: 77
+  controlID: 121
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -166,7 +166,7 @@ MonoBehaviour:
   m_MinSize: {x: 234, y: 494}
   m_MaxSize: {x: 10004, y: 14044}
   vertical: 1
-  controlID: 78
+  controlID: 51
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -390,7 +390,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 6241ffff72fbffff
+      m_ExpandedIDs: 78fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -450,9 +450,9 @@ MonoBehaviour:
   m_PlayAudio: 1
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 2.1590176, y: -1.2762345, z: -2.136701}
+    m_Target: {x: -0.31002018, y: 0.7632672, z: -0.25368047}
     speed: 2
-    m_Value: {x: 2.1590176, y: -1.2762345, z: -2.136701}
+    m_Value: {x: -0.31002018, y: 0.7632672, z: -0.25368047}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -481,13 +481,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: 0.016063962, y: 0.9829249, z: -0.17589107, w: 0.07134521}
+    m_Target: {x: -0.02036897, y: 0.97960985, z: -0.13785863, w: -0.14474857}
     speed: 2
-    m_Value: {x: 0.015780967, y: 0.98184, z: -0.17570187, w: 0.0697861}
+    m_Value: {x: -0.019717336, y: 0.9802167, z: -0.13344851, w: -0.14483823}
   m_Size:
-    m_Target: 6.7498617
+    m_Target: 2.2095146
     speed: 2
-    m_Value: 7.067918
+    m_Value: 1.9095147
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -578,20 +578,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Custom/05-Prefabs/Materials/Materials
+    - Assets/Prefabs-02/Ko
   m_ViewMode: 1
   m_StartGridSize: 47
   m_LastFolders:
-  - Assets/Custom/05-Prefabs/Materials/Materials
+  - Assets/Prefabs-02/Ko
   m_LastFoldersGridSize: 47
-  m_LastProjectPath: C:\Users\Matthew\Desktop\VRcade2
+  m_LastProjectPath: C:\Users\Matthew\Desktop\katth-game490\Ko_UnityProject_GAME490\Assets\Scenes\Matt-H_Sandbox\Matt-H_SandboxScene
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 839}
-    m_SelectedIDs: 60420000
-    m_LastClickedID: 16992
-    m_ExpandedIDs: 00000000d0400000da40000028410000d64100001842000060430000044400006a470000924a0000ea4c0000ec4e0000e250000046520000d05300003054000058540000b6550000b0590000b4590000f65900004a5a0000b05b00009c5c0000265e00005c5f0000625f0000785f00007a5f00007060000096600000fe6200003a660000d26700008e680000f06b00002a6c00007c6d0000186e0000786e0000ae6f0000f26f0000ae7000000e7200008472000024730000947300000474000038740000a67600009c790000ba7900005c7a00001c7c0000947e0000548000005e800000728100008e810000388300007e8400003e860000ec87000000f2010002f2010004f2010000ca9a3b
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 0a310000
+    m_LastClickedID: 12554
+    m_ExpandedIDs: 00000000082d0000ca300000cc300000e2300000ea300000ee300000fe3000000431000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -619,7 +619,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000d0400000da40000028410000d64100001842000060430000044400006a470000924a0000ea4c0000ec4e0000e250000046520000d05300003054000058540000ac54000018550000b6550000b0590000b4590000f65900004a5a0000b05b00009c5c0000265e00005c5f0000625f0000785f00007a5f00007060000096600000fe6200003a660000d26700008e680000f06b00002a6c00007c6d0000186e0000786e0000ae6f0000f26f0000ae7000000e7200008472000024730000947300000474000038740000a67600004a7900009c790000ba7900005c7a00001c7c0000947e0000548000005e800000728100008e810000388300007e8400003e860000ec87000000f2010002f2010004f20100
+    m_ExpandedIDs: 
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
