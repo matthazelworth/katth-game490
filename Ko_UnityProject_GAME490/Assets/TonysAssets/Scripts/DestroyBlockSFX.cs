@@ -10,8 +10,6 @@ public class DestroyBlockSFX : MonoBehaviour
 
     private AudioSource audioSource;
 
-    private ParticleSystem thisParticleSystem;
-
     // Start is called before the first frame update
     void Start()
     {
