@@ -4,59 +4,70 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    public Transform target;
-    public Vector3 offsetPos;
-    public float moveSpeed = 5;
-    public float turnSpeed = 10;
-    public float smoothSpeed = 0.5f;
+    //creates a tranform array
+    public Transform[] levelViews;
 
-    Quaternion targetRotation;
-    Vector3 targetPos;
-    bool smoothRotating = false;
+    //speed at which the camera will transition, value set in Unity inspector
+    public float transitonSpeed;
+
+    //the variable that is used to determine which view the camera is currenlty at
+    Transform currentView;
+
+    int currentIndex = 0;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        //the initial camera view when the scene loads
+        currentView = levelViews[currentIndex];     
+    }
 
     void Update()
     {
-        MoveWithTraget();
-        LookAtTarget();
-
-        if(Input.GetKeyDown(KeyCode.G) && !smoothRotating)
+       //when a certain key is pressed: "f"
+       /*if(Input.GetKeyDown(KeyCode.F))
         {
-            StartCoroutine("RotateAroundTarget", -90);
-        }
-        if (Input.GetKeyDown(KeyCode.H) && !smoothRotating)
-        {
-            StartCoroutine("RotateAroundTarget", 90);
+            //set the camera view a specific view within the array
+            currentView = levelViews[3]; 
         }
 
-    }
-
-    void MoveWithTraget()
-    {
-        targetPos = target.position + offsetPos;
-        transform.position = Vector3.Lerp(transform.position, targetPos, moveSpeed * Time.deltaTime);
-    }
-
-    void LookAtTarget()
-    {
-        targetRotation = Quaternion.LookRotation(target.position - transform.position);
-        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, turnSpeed * Time.deltaTime);
-    }
-
-    IEnumerator RotateAroundTarget(float angle)
-    {
-        Vector3 vel = Vector3.zero;
-        Vector3 targetOffsetPos = Quaternion.Euler(0, angle, 0) * offsetPos;
-        float dist = Vector3.Distance(offsetPos, targetOffsetPos);
-
-        while(dist > 0.02f)
+       //when a certain key is pressed "1"
+       if(Input.GetKeyDown(KeyCode.Alpha1))
         {
-            offsetPos = Vector3.SmoothDamp(offsetPos, targetOffsetPos, ref vel, smoothSpeed);
-            dist = Vector3.Distance(offsetPos, targetOffsetPos);
-            yield return null;
+            currentView = levelViews[0];
         }
 
-        smoothRotating = false;
-        offsetPos = targetOffsetPos;
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            currentView = levelViews[1];
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            currentView = levelViews[2];
+        }*/
+
+       if(Input.GetKeyDown(KeyCode.F))
+        {
+            Debug.Log("Lol this worked?");
+
+            if (currentIndex >= 4)
+            {
+                Debug.Log("Reset dis shiiiiii");
+                currentIndex = 0;
+            }
+
+            currentView = levelViews[currentIndex++];
+        }
+
     }
 
+
+    // Update is called once per frame
+    void LateUpdate()
+    {
+        //move the camera's current position to the new position via linear interpolation
+        transform.position = Vector3.Lerp(transform.position, currentView.position, Time.deltaTime * transitonSpeed);
+
+    }
 }
